@@ -32,7 +32,7 @@
 			]
 		},
 		"layout": {
-			"contentSize": "50rem",
+			"contentSize": "62.5rem",
 			"wideSize": "62.5rem"
 		},
 		"spacing": {
@@ -140,6 +140,24 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--open-sans)"
 				}
+			},
+			"core/pullquote": {
+				"spacing": {
+					"padding": {
+						"bottom": "var(--wp--preset--spacing--50)",
+						"top": "var(--wp--preset--spacing--50)"
+					}
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--large)"
+				},
+				"elements": {
+					"cite": {
+						"typography": {
+							"fontSize": "var(--wp--preset--font-size--medium)"
+						}
+					}
+				}
 			}
 		},
 		"color": {
@@ -155,7 +173,7 @@
 			},
 			"heading": {
 				"color": {
-					"text": "var(--wp--preset--color--base)"
+					"text": "var(--wp--preset--color--contrast)"
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--pt-serif)",
@@ -193,11 +211,18 @@
 	"templateParts": [
 		{
 			"area": "header",
-			"name": "header"
+			"name": "header",
+			"title": "Header"
 		},
 		{
 			"area": "footer",
-			"name": "footer"
+			"name": "footer",
+			"title": "Footer"
+		},
+		{
+			"area": "uncategorized",
+			"name": "sidebar",
+			"title": "Sidebar"
 		}
 	],
 	"version": 3,
