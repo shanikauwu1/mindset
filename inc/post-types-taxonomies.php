@@ -98,6 +98,63 @@ function mindset_register_custom_post_types() {
     );
     
     register_post_type( 'fwd-testimonial', $args );
+
+    // CTP for Services
+    $labels = array(
+        'name'                     => _x( 'Services', 'post type general name', 'mindset-theme' ),
+        'singular_name'            => _x( 'Service', 'post type singular name', 'mindset-theme' ),
+        'add_new'                  => _x( 'Add New', 'Service', 'mindset-theme' ),
+        'add_new_item'             => __( 'Add New Service', 'mindset-theme' ),
+        'edit_item'                => __( 'Edit Service', 'mindset-theme' ),
+        'new_item'                 => __( 'New Service', 'mindset-theme' ),
+        'view_item'                => __( 'View Service', 'mindset-theme' ),
+        'view_items'               => __( 'View Services', 'mindset-theme' ),
+        'search_items'             => __( 'Search Services', 'mindset-theme' ),
+        'not_found'                => __( 'No Service found.', 'mindset-theme' ),
+        'not_found_in_trash'       => __( 'No Service found in Trash.', 'mindset-theme' ),
+        'parent_item_colon'        => __( 'Parent Services:', 'mindset-theme' ),
+        'all_items'                => __( 'All Services', 'mindset-theme' ),
+        'archives'                 => __( 'Services Archives', 'mindset-theme' ),
+        'attributes'               => __( 'Service Attributes', 'mindset-theme' ),
+        'insert_into_item'         => __( 'Insert into Service', 'mindset-theme' ),
+        'uploaded_to_this_item'    => __( 'Uploaded to this Service', 'mindset-theme' ),
+        'featured_image'           => __( 'Service featured image', 'mindset-theme' ),
+        'set_featured_image'       => __( 'Set Service featured image', 'mindset-theme' ),
+        'remove_featured_image'    => __( 'Remove Service featured image', 'mindset-theme' ),
+        'use_featured_image'       => __( 'Use as featured image', 'mindset-theme' ),
+        'menu_name'                => _x( 'Services', 'admin menu', 'mindset-theme' ),
+        'filter_items_list'        => __( 'Filter Services list', 'mindset-theme' ),
+        'items_list_navigation'    => __( 'Services list navigation', 'mindset-theme' ),
+        'items_list'               => __( 'Services list', 'mindset-theme' ),
+        'item_published'           => __( 'Service published.', 'mindset-theme' ),
+        'item_published_privately' => __( 'Service published privately.', 'mindset-theme' ),
+        'item_revereted_to_draft'  => __( 'Service reverted to draft.', 'mindset-theme' ),
+        'item_trashed'             => __( 'Service trashed.', 'mindset-theme' ),
+        'item_scheduled'           => __( 'Service scheduled.', 'mindset-theme' ),
+        'item_updated'             => __( 'Service updated.', 'mindset-theme' ),
+        'item_link'                => __( 'Service link.', 'mindset-theme' ),
+        'item_link_description'    => __( 'A link to a Service.', 'mindset-theme' ),
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_nav_menus'  => true,
+        'show_in_admin_bar'  => true,
+        'show_in_rest'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'works' ),
+        'capability_type'    => 'post',
+        'has_archive'        => false,
+        'hierarchical'       => false,
+        'menu_position'      => 5,
+        'menu_icon'          => 'dashicons-index-card',
+        'supports'           => array( 'title', 'editor' ),
+    );
+    register_post_type( 'fwd-service', $args );
 }
 add_action( 'init', 'mindset_register_custom_post_types' );
 
